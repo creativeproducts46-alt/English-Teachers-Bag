@@ -23,9 +23,9 @@ jobs:
         with:
           channel: 'stable'
 
-      - - name: Initialize Flutter Project Structure
-  run: |
-    flutter create --org com.dz.englishteacher --project-name english_teachers_bag .
+      - name: Initialize Flutter Project Structure
+        run: |
+          flutter create --org com.dz.englishteacher --project-name english_teachers_bag .
 
       - name: Install dependencies
         run: flutter pub get
