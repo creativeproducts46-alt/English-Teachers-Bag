@@ -27,8 +27,10 @@ jobs:
         run: |
           flutter create --org com.dz.englishteacher --project-name english_teachers_bag .
 
-      - name: Install dependencies
-        run: flutter pub get
+      - name: Inject Project Dependencies & Code
+        run: |
+          flutter pub add flutter_pdfview audioplayers http path_provider
+          cp app_code.dart lib/main.dart
 
       - name: Build APK
         run: flutter build apk --release
